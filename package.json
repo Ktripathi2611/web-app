@@ -1,0 +1,29 @@
+{
+  "name": "ecommerceweb",
+  "version": "1.0.0",
+  "description": "E-commerce website extension for auto-importing, auto-closing .env files, converting HTML to JSX, and Prettier formatting.",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [
+    "e-commerce",
+    "extension",
+    "auto-import",
+    ".env",
+    "html",
+    "jsx",
+    "prettier"
+  ],
+  "author": "Ktripathi2611",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}

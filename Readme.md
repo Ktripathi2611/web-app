@@ -1,6 +1,6 @@
 
 
-### Prerequisites for E-commerce Project(befire creating any subFolder )
+### Prerequisites for E-commerce Project(before creating any subFolder )
 
 #### Extensions for Visual Studio Code (VS Code)
 1. **Auto Import**: Automatically imports files as you type.

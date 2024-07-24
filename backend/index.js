@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 
 // Importing connectDB utility
 import connectDB from './config/db.js';
-import userRoutes from './userRoutes.js';
+import userRoutes from './Routes/userRoutes.js'; // Assuming ES Modules
 
 // Load environment variables from .env file
 dotenv.config();

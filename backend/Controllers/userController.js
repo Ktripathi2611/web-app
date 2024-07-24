@@ -1,6 +1,6 @@
 import User from '../models/userModels.js'; // Correct import
 import asyncHandler from '../middlewares/asyncHandler.js';
-import bcrypt from 'bcryptjs';//  use of bcrypt is to hash the password (hashing means=encrypting the password)
+import bcrypt from 'bcryptjs'; // Use bcrypt to hash the password
 
 const createUser = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
@@ -18,13 +18,15 @@ const createUser = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: 'User already exists' });
   }
 
+  // Generate a salt and hash the password
+  const salt = await bcrypt.genSalt(10); // Generate a salt
+  const hashedPassword = await bcrypt.hash(password, salt); // Hash the password using the salt
 
-  
-  // Create new user
+  // Create new user with hashed password
   const newUser = new User({
     username,
     email,
-    password,
+    password: hashedPassword,
   });
 
   try {

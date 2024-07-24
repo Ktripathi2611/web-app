@@ -3,8 +3,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 
-// Importing connectDB utility from './config/db.js'
+// Importing connectDB utility
 import connectDB from './config/db.js';
+import userRoutes from './userRoutes.js';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -21,9 +22,7 @@ app.use(cookieParser());
 connectDB();
 
 // Routes
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.use('/api/users', userRoutes);
 
 // Start server
 app.listen(port, () => {

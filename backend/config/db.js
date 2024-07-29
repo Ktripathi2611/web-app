@@ -10,4 +10,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB; // Export using ES6 default export syntax
+export default connectDB;//imported to index page where it is used 

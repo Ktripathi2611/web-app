@@ -9,9 +9,9 @@ import {
   deleteUserById,
   getUserById,
   updateUserById,
-} from "../Controllers/userController.js";
+} from "../controllers/userController.js";
 
-import { authenticate, authorizeAdmin } from "../middlewares/authMiddlware.js";
+import { authenticate, authorizeAdmin } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 

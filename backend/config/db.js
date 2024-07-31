@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("MongoDB Connected successfully ");
+    console.log(`Successfully connnected to mongoDB 👍`);
   } catch (error) {
-    console.error(`Error connecting to MongoDB: ${error.message}`);
-    process.exit(1); // Exit process with an error code
+    console.error(`ERROR: ${error.message}`);
+    process.exit(1);
   }
 };
 
-export default connectDB;//imported to index page where it is used 
+export default connectDB;

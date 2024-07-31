@@ -1,13 +1,13 @@
 {
-  "name": "e-commerce",
+  "name": "mern-e-commerce-store-main",
   "version": "1.0.0",
-  "description": "npm create vite@latest Frontend -- --template react\r  cd Frontend\r   npm install\r   npm run dev\r    cd..",
   "main": "index.js",
   "type": "module",
+
   "scripts": {
     "backend": "nodemon backend/index.js",
-    "Frontend": " npm run  dev --prefix Frontend",
-    "dev": "concurrently \"npm run Frontend\" \"npm run backend\""
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "keywords": [],
   "author": "",
@@ -22,13 +22,8 @@
     "express-async-handler": "^1.2.0",
     "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.1",
+    "mongoose": "^7.8.0",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.6"
   }
 }
